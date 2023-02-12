@@ -1,0 +1,14 @@
+.filter {
+  margin-bottom: 5px;
+}
+
+.labelFilter {
+  color: rgb(3, 123, 123);
+}
+
+.filterInput {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(3, 123, 123);
+  color: rgb(3, 123, 175);
+}
