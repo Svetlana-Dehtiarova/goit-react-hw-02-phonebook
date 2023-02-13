@@ -8,10 +8,10 @@ class ContactForm extends Component {
   };
 
   handleChange = name => e => {
-    const { target } = e;
+    const { name, value } = e.target;
 
     this.setState(() => ({
-      [name]: target.value,
+      [name]: value,
     }));
   };
 
@@ -38,7 +38,7 @@ class ContactForm extends Component {
           <input
             className={css.inputName}
             value={this.state.name}
-            onChange={this.handleChange('name')}
+            onChange={this.handleChange}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -51,7 +51,7 @@ class ContactForm extends Component {
           <input
             className={css.inputNumber}
             value={this.state.number}
-            onChange={this.handleChange('number')}
+            onChange={this.handleChange}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
